@@ -54,9 +54,9 @@ class BlogSerializer(serializers.ModelSerializer):
 
 
 class CommentSerializer(serializers.ModelSerializer):
-    id = serializers.IntegerField(read_only=True)
+    id   = serializers.IntegerField(read_only=True)
     user = serializers.CharField(read_only=True)
-    blog = serializers.CharField(read_only=True)
+    blog = BlogSerializer(many=False,read_only=True)
     class Meta:
         model = Comments
         fields = "__all__"

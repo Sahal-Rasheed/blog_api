@@ -63,7 +63,7 @@ class BlogView(ViewSet):
     def update(self,request,*args,**kwargs):
         id = kwargs.get('pk')
         try:
-            blog = Blogs.objects.get(id=id)
+            blog = Blogs.objects.get(id=id,user_id=request.user)
             serializer = BlogSerializer(data=request.data, instance=blog)
             if serializer.is_valid():
                 old_image_key = blog.image.name
@@ -117,14 +117,18 @@ class CommentView(APIView):
 
     def post(self,request,*args,**kwargs):
         id = kwargs.get('pk')
-        blog = Blogs.objects.get(id=id)
-        user = request.user
-        serializer = CommentSerializer(data=request.data, context={'blog':blog, 'user':user})
-        if serializer.is_valid():  
-            serializer.save()
-            return Response({"status":201, "message":"Comment added"}, status=status.HTTP_201_CREATED)
-        
-        return Response({"status":400, "message":"Validation error", "data":serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+        try:
+            blog = Blogs.objects.get(id=id)
+            user = request.user
+            serializer = CommentSerializer(data=request.data, context={'blog':blog, 'user':user})
+            if serializer.is_valid():  
+                serializer.save()
+                return Response({"status":201, "message":"Comment added"}, status=status.HTTP_201_CREATED)
+            
+            return Response({"status":400, "message":"Validation error", "data":serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+               
+        except Blogs.DoesNotExist:   
+            return Response({"status":404, "message":"Blog not found"}, status=status.HTTP_404_NOT_FOUND)
     
 
 class CommentUpdateDeleteView(APIView):
