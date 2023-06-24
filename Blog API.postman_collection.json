@@ -674,83 +674,6 @@
 			},
 			"response": [
 				{
-					"name": "Valid Response",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Token edc54062f31dfae12370336342d1d94046eb7721",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "http://127.0.0.1:8000/api/v1/blogs/",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"v1",
-								"blogs",
-								""
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Date",
-							"value": "Sat, 24 Jun 2023 10:50:21 GMT"
-						},
-						{
-							"key": "Server",
-							"value": "WSGIServer/0.2 CPython/3.10.8"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						},
-						{
-							"key": "Vary",
-							"value": "Accept"
-						},
-						{
-							"key": "Allow",
-							"value": "GET, POST, HEAD, OPTIONS"
-						},
-						{
-							"key": "X-Frame-Options",
-							"value": "DENY"
-						},
-						{
-							"key": "Content-Length",
-							"value": "2244"
-						},
-						{
-							"key": "X-Content-Type-Options",
-							"value": "nosniff"
-						},
-						{
-							"key": "Referrer-Policy",
-							"value": "same-origin"
-						},
-						{
-							"key": "Cross-Origin-Opener-Policy",
-							"value": "same-origin"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"count\": 6,\n    \"next\": \"http://127.0.0.1:8000/api/v1/blogs/?page=2\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 19,\n            \"user\": \"David\",\n            \"title\": \"Blog 1\",\n            \"content\": \"This is a good blog.\",\n            \"image\": \"https://blogimagestore.s3.amazonaws.com/blog_post_Blog%201.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2ICMCHMNGHSFOOMU%2F20230624%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230624T105021Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=e432fb645234dd7ae8e7a6b6d80aef6d2405d78693ded98ff5a010e965c2f203\"\n        },\n        {\n            \"id\": 20,\n            \"user\": \"admin\",\n            \"title\": \"Blog 2\",\n            \"content\": \"This is Blog 2\",\n            \"image\": \"https://blogimagestore.s3.amazonaws.com/blog_images/django.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2ICMCHMNGHSFOOMU%2F20230624%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230624T105021Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=89bf37713af4ad47c296d32f3ab6aa1ffda0430ef9da7c4e02d573def313d93c\"\n        },\n        {\n            \"id\": 21,\n            \"user\": \"admin\",\n            \"title\": \"Blog 3\",\n            \"content\": \"This is blog 3\",\n            \"image\": \"https://blogimagestore.s3.amazonaws.com/blog_images/6620082d-9a6f-417e-8a01-eb784f2b93fe_cover_g83HE2K.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2ICMCHMNGHSFOOMU%2F20230624%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230624T105021Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=4f5eaaa94965ed543d6721d671def44c857722f04029d881610fe010d9c3a89e\"\n        },\n        {\n            \"id\": 22,\n            \"user\": \"David\",\n            \"title\": \"Blog 4\",\n            \"content\": \"This is Blog 4\",\n            \"image\": \"https://blogimagestore.s3.amazonaws.com/blog_images/blog-blogging-concept-business-113686766.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2ICMCHMNGHSFOOMU%2F20230624%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230624T105021Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=50e0add89e9460373812d2513edc4a41eac5355fdc041d70176ef1422a2a13f1\"\n        },\n        {\n            \"id\": 23,\n            \"user\": \"admin\",\n            \"title\": \"Blog 5\",\n            \"content\": \"This is Blog 5\",\n            \"image\": \"https://blogimagestore.s3.amazonaws.com/blog_images/Blog_Platform_121919_WP-2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2ICMCHMNGHSFOOMU%2F20230624%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230624T105021Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=3d7c3a04fac8456a4c331e4aa1ad63c47074a67aa062bca124cfea90123329d1\"\n        }\n    ]\n}"
-				},
-				{
 					"name": "Invalid Response",
 					"originalRequest": {
 						"method": "GET",
@@ -824,6 +747,83 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
+				},
+				{
+					"name": "Valid Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token edc54062f31dfae12370336342d1d94046eb7721",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/blogs/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"blogs",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 13:15:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.8"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2164"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 5,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 19,\n            \"user\": \"David\",\n            \"title\": \"Blog Updated\",\n            \"content\": \"Blog Content Updated\",\n            \"image\": \"https://blogimagestore.s3.amazonaws.com/blog_post_19.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2ICMCHMNGHSFOOMU%2F20230624%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230624T131524Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=4c5addfbd2914d48d2a2a5587f92b913f6d69aa5967e59caf1e7836e7c70e015\"\n        },\n        {\n            \"id\": 20,\n            \"user\": \"admin\",\n            \"title\": \"Blog 2\",\n            \"content\": \"This is Blog 2\",\n            \"image\": \"https://blogimagestore.s3.amazonaws.com/blog_images/django.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2ICMCHMNGHSFOOMU%2F20230624%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230624T131524Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=9aee811c42a4818bd24abe9139325f103292260bf8836e13c900d72f17c85e73\"\n        },\n        {\n            \"id\": 21,\n            \"user\": \"admin\",\n            \"title\": \"Blog Updated\",\n            \"content\": \"Blog Content Updated\",\n            \"image\": \"https://blogimagestore.s3.amazonaws.com/blog_post_21.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2ICMCHMNGHSFOOMU%2F20230624%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230624T131524Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=4651c0d59fe5e14dc44b63d5b2691c0b774254a2f99a2d5e5d0c00b50a38cc4e\"\n        },\n        {\n            \"id\": 23,\n            \"user\": \"admin\",\n            \"title\": \"Blog 5\",\n            \"content\": \"This is Blog 5\",\n            \"image\": \"https://blogimagestore.s3.amazonaws.com/blog_images/Blog_Platform_121919_WP-2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2ICMCHMNGHSFOOMU%2F20230624%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230624T131524Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=11c61b568856efe59d870ed249a17dc26a936cdec820e1b7bbab05c971aa6951\"\n        },\n        {\n            \"id\": 24,\n            \"user\": \"Jhon\",\n            \"title\": \"Blog 6\",\n            \"content\": \"This is Blog 6\",\n            \"image\": \"https://blogimagestore.s3.amazonaws.com/blog_images/facebook-1200x630.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2ICMCHMNGHSFOOMU%2F20230624%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230624T131524Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=6b72556c54941ed37077549edc605ed741127c3f13c813c5c1f8835bcc785360\"\n        }\n    ],\n    \"limit\": 5,\n    \"page_no\": 1\n}"
 				}
 			]
 		},
@@ -1693,9 +1693,35 @@
 		},
 		{
 			"name": "Retrieve Comments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token edc54062f31dfae12370336342d1d94046eb7721",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "David",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
 				"url": {
 					"raw": "http://127.0.0.1:8000/api/v1/blogs/19/comments/",
 					"protocol": "http",
@@ -1729,6 +1755,23 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "David",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
 						"url": {
 							"raw": "http://127.0.0.1:8000/api/v1/blogs/19/comments/",
 							"protocol": "http",
@@ -1755,7 +1798,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Sat, 24 Jun 2023 11:37:03 GMT"
+							"value": "Sat, 24 Jun 2023 13:14:38 GMT"
 						},
 						{
 							"key": "Server",
@@ -1779,7 +1822,7 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "989"
+							"value": "542"
 						},
 						{
 							"key": "X-Content-Type-Options",
@@ -1795,7 +1838,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"count\": 2,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 8,\n            \"user\": \"David\",\n            \"blog\": {\n                \"id\": 19,\n                \"user\": \"David\",\n                \"title\": \"Blog Updated\",\n                \"content\": \"Blog Content Updated\",\n                \"image\": \"https://blogimagestore.s3.amazonaws.com/blog_post_19.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2ICMCHMNGHSFOOMU%2F20230624%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230624T113703Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=cf8833e821b61e10b414e537c2869cb5261515bead06a89e9a6a0ceff940f38c\"\n            },\n            \"comment\": \"Good Blog\"\n        },\n        {\n            \"id\": 9,\n            \"user\": \"admin\",\n            \"blog\": {\n                \"id\": 19,\n                \"user\": \"David\",\n                \"title\": \"Blog Updated\",\n                \"content\": \"Blog Content Updated\",\n                \"image\": \"https://blogimagestore.s3.amazonaws.com/blog_post_19.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2ICMCHMNGHSFOOMU%2F20230624%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230624T113703Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=cf8833e821b61e10b414e537c2869cb5261515bead06a89e9a6a0ceff940f38c\"\n            },\n            \"comment\": \"Nice Blog\"\n        }\n    ]\n}"
+					"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 9,\n            \"user\": \"admin\",\n            \"blog\": {\n                \"id\": 19,\n                \"user\": \"David\",\n                \"title\": \"Blog Updated\",\n                \"content\": \"Blog Content Updated\",\n                \"image\": \"https://blogimagestore.s3.amazonaws.com/blog_post_19.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2ICMCHMNGHSFOOMU%2F20230624%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20230624T131438Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=836f45371708d43a4cef26673901f05b74a17990926fad875b8043ea0a189d6b\"\n            },\n            \"comment\": \"Nice Blog\"\n        }\n    ],\n    \"limit\": 5,\n    \"page_no\": 1\n}"
 				},
 				{
 					"name": "Invalid Response",

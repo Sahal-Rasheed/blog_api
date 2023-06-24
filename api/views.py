@@ -49,7 +49,10 @@ class BlogView(ViewSet):
         result_page = paginator.paginate_queryset(blogs, request)
         serializer = BlogSerializer(result_page, many=True)
 
-        return paginator.get_paginated_response(serializer.data)
+        response = paginator.get_paginated_response(serializer.data)
+        response.data["limit"] = paginator.page_size
+        response.data["page_no"] = paginator.page.number
+        return response     
     
     def retrieve(self,request,*args,**kwargs):
         id = kwargs.get('pk')
@@ -109,7 +112,12 @@ class CommentView(APIView):
                 paginator = self.pagination_class()
                 result_page = paginator.paginate_queryset(comments, request)
                 serializer = CommentSerializer(result_page, many=True)
-                return paginator.get_paginated_response(serializer.data)
+                
+                response = paginator.get_paginated_response(serializer.data)
+                response.data["limit"] = paginator.page_size
+                response.data["page_no"] = paginator.page.number
+                return response       
+             
             return Response({"status":404, "message":"Comments Not Found"}, status=status.HTTP_404_NOT_FOUND)
              
         except Blogs.DoesNotExist:
